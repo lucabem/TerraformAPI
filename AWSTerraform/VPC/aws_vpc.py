@@ -16,56 +16,6 @@ class AWSVpc(AWSComponent):
         self.assign_generated_ipv6_cidr_block = assign_generated_ipv6_cidr_block
         self.tags = tags
 
-    # Setters
-    def setCidrBlock(self, cidr_block):
-        self.cidr_block = cidr_block
-
-    def setInstanceTenacy(self, instance_tenacy):
-        self.instance_tenacy = instance_tenacy
-
-    def setEnableDnsSupport(self, enable_dns_support):
-        self.enable_dns_support = enable_dns_support
-
-    def setEnableDnsHostnames(self, enable_dns_hostnames):
-        self.enable_dns_hostnames = enable_dns_hostnames
-
-    def setEnableClassicLink(self, enable_classiclink):
-        self.enable_classiclink = enable_classiclink
-
-    def setEnableClassicLinkDnsSupport(self, enable_classiclink_dns_support):
-        self.enable_classiclink_dns_support = enable_classiclink_dns_support
-
-    def setAssignGeneratedIpv6CidrBlock(self, assign_generated_ipv6_cidr_block):
-        self.assign_generated_ipv6_cidr_block = assign_generated_ipv6_cidr_block
-
-    def setTags(self, tags):
-        self.tags = tags
-
-    # Getters
-    def getCidrBlock(self):
-        return self.cidr_block
-
-    def getInstanceTenacy(self):
-        return self.instance_tenacy
-
-    def getEnableDnsSupport(self):
-        return self.enable_dns_support
-
-    def getEnableDnsHostnames(self):
-        return self.enable_dns_hostnames
-
-    def getEnableClassicLink(self):
-        return self.enable_classiclink
-
-    def getEnableClassicLinkDnsSupport(self):
-        return self.enable_classiclink_dns_support
-
-    def getAssignGeneratedIpv6CidrBlock(self):
-        return self.assign_generated_ipv6_cidr_block
-
-    def getTags(self):
-        return self.tags
-
     def to_string(self):
         resource_header = '"aws_vpc"'
 
