@@ -1,1 +1,1 @@
-from AWSTerraform.VPC.aws_vpc import *
+from AWSTerraform.VPC.aws_networking import *
