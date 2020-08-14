@@ -42,8 +42,11 @@ class AWSVpc(AWSComponent):
                                     "}"])
         return string_resource
 
-    def getID(self):
+    def get_id(self):
         return ".".join(['aws_vpc', self.component_name, 'id'])
+
+    def get_arn(self):
+        return ".".join(['aws_vpc', self.component_name, 'arn'])
 
 
 class AWSSubnet(AWSComponent):
@@ -80,7 +83,7 @@ class AWSSubnet(AWSComponent):
                     dict_as_tf += '\t' + key + ' = ' + str(value).lower() + '\n'
                 else:
                     if key == 'vpc':
-                        value = self.vpc.getID()
+                        value = self.vpc.get_id()
                         dict_as_tf += '\t' + key + ' = ' + str(value) + '\n'
                     else:
                         dict_as_tf += '\t' + key + ' = "' + str(value) + '"\n'
@@ -95,5 +98,13 @@ class AWSSubnet(AWSComponent):
                                     dict_as_tf,
                                     "}"])
         return string_resource
+
+    def get_id(self):
+        return ".".join(['aws_subnet', self.component_name, 'id'])
+
+    def get_arn(self):
+        return ".".join(['aws_subnet', self.component_name, 'arn'])
+
+
 
 
